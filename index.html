@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Belle Atelier</title>
+<meta name="description" content="Temukan koleksi gaun pengantin dan heels pengantin baru dengan desain elegan, harga terjangkau, dan layanan reservasi fitting di La Belle Atelier.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La Belle Atelier | Premium Bridal Dress & Wedding Heels">
+<meta property="og:description" content="Temukan koleksi gaun pengantin dan heels pengantin baru dengan desain elegan, harga terjangkau, dan layanan reservasi fitting di La Belle Atelier.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap">
+<style>
+:root{
+  /* Layout: editorial arch-framed hero with a scrolling gold ticker; wine, blush and gold colour blocks alternate by section; hairline gold rules and twinkling sparkles keep it lively. */
+  --cream:#FFF8F4; --nude:#F8DDE2; --rose:#E8789A; --rose-deep:#C2476A; --wine:#7A1636; --wine-dark:#4A0E24;
+  --ink:#2B1B25; --ink-soft:#6A5560; --gold:#D8A648; --gold-deep:#8A5F14; --nude-soft:#FDEEF0; --blush:#FAD9DF; --lilac:#EEE3F8; --white:#FFFFFF;
+  --line:rgba(216,166,72,.7); --shadow:0 14px 34px -16px rgba(122,22,54,.45);
+  --serif:'Cormorant Garamond','Playfair Display',Georgia,serif;
+  --sans:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --script:'Pinyon Script','Snell Roundhand','Apple Chancery',cursive;
+  color-scheme:light;
+}
+html{scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 15px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--cream)}
+img{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
+.wrap{width:min(1180px,100%);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{scroll-margin-top:84px}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
+.rule{display:block;width:64px;height:1px;background:var(--gold);margin:18px 0}
+.sec{padding-block:76px}
+.sec-head{display:grid;gap:10px;margin-bottom:40px;max-width:640px}
+.sec-head h2{font-size:clamp(32px,5vw,50px)}
+.sec-head p{color:var(--ink-soft)}
+.center{text-align:center;margin-inline:auto;justify-items:center}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 24px;border:1px solid var(--ink);background:var(--ink);color:var(--cream);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;text-decoration:none;border-radius:2px;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn:hover{background:var(--gold-deep);border-color:var(--gold-deep);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--gold)}
+.btn.ghost:hover{background:var(--nude);color:var(--ink);border-color:var(--gold-deep)}
+.btn.sm{min-height:40px;padding:0 16px;font-size:11px}
+.btn.wa{background:#25D366;border-color:#25D366;color:#0f2a1a}
+.btn.wa:hover{background:#1fb858;border-color:#1fb858;color:#0f2a1a}
+.btn svg{width:16px;height:16px;flex:none}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(253,251,247,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:background .3s,border-color .3s,box-shadow .3s}
+.hdr.scrolled{background:rgba(253,251,247,.94);border-bottom-color:var(--line);box-shadow:0 6px 20px -16px rgba(44,42,41,.4)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;transition:min-height .3s}
+.hdr.scrolled .wrap{min-height:58px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mono{font-family:var(--script);font-size:38px;line-height:1;color:var(--gold);letter-spacing:-.02em;padding-bottom:4px}
+.logo-t{font-size:9.5px;letter-spacing:.3em;font-weight:500;color:var(--ink);line-height:1.3}
+.nav{display:none}
+.nav a{font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:6px 2px;position:relative}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-deep);transition:width .3s}
+.nav a:hover::after{width:100%}
+.hdr-cta{display:none}
+.burger{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0 11px;background:none;border:1px solid var(--line);border-radius:2px}
+.burger i{display:block;height:1px;background:var(--ink);transition:transform .3s,opacity .3s}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mnav{display:none;border-top:1px solid var(--line);background:var(--cream)}
+.mnav.open{display:block}
+.mnav .wrap{display:grid;gap:2px;padding-block:14px 20px;min-height:0}
+.mnav a{text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(197,168,128,.3);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.mnav .btn{margin-top:14px;border-bottom:1px solid var(--ink)}
+@media(min-width:960px){
+  .nav{display:flex;gap:24px}
+  .hdr-cta{display:inline-flex}
+  .burger,.mnav{display:none!important}
+}
+
+/* hero */
+.hero{padding-block:44px 64px;overflow:hidden}
+.hero .wrap{display:grid;gap:40px;align-items:center}
+.hero h1{font-size:clamp(44px,8vw,84px);font-weight:400;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--gold-deep)}
+.hero .sub{max-width:480px;color:var(--ink-soft);font-size:16px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.arch{position:relative;max-width:440px;margin-inline:auto;width:100%}
+.arch .frame{border-radius:999px 999px 6px 6px;overflow:hidden;border:1px solid var(--gold);padding:10px;background:var(--cream)}
+.arch .frame img{border-radius:999px 999px 2px 2px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.arch .tag{position:absolute;left:-6px;bottom:28px;background:var(--cream);border:1px solid var(--line);padding:10px 16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;box-shadow:var(--shadow)}
+.arch .tag b{display:block;font-family:var(--serif);font-size:20px;letter-spacing:0;text-transform:none;font-weight:500}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr;gap:64px}.hero{padding-block:70px 90px}}
+
+/* promo */
+.promo{background:var(--nude);border-block:1px solid var(--gold);position:relative}
+.promo .wrap{display:grid;gap:28px;padding-block:52px;align-items:center}
+.badge-so{display:inline-block;border:1px solid var(--gold-deep);color:var(--gold-deep);padding:5px 14px;font-size:10.5px;letter-spacing:.3em;font-weight:600;margin-bottom:16px}
+.promo h2{font-size:clamp(34px,5.5vw,56px);letter-spacing:.02em}
+.promo p.lead{margin-top:14px;max-width:560px}
+.hl{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hl div{background:var(--cream);border:1px solid var(--gold);padding:12px 18px;min-width:0}
+.hl b{display:block;font-family:var(--serif);font-size:28px;font-weight:600;line-height:1.1}
+.hl span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.promo .pair{display:flex;gap:14px;justify-content:center}
+.promo .pair figure{margin:0;width:min(46%,200px);border:1px solid var(--gold);background:var(--cream);padding:6px;border-radius:999px 999px 4px 4px}
+.promo .pair figure:nth-child(2){margin-top:34px;border-radius:4px 4px 999px 999px}
+.promo .pair img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:inherit}
+@media(min-width:860px){.promo .wrap{grid-template-columns:1.25fr .75fr}}
+
+/* about */
+.about .wrap{display:grid;gap:36px}
+.about blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(26px,4vw,38px);line-height:1.25;border-left:1px solid var(--gold);padding-left:22px}
+.facts{display:grid;gap:0;border-top:1px solid var(--line)}
+.fact{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.fact svg{width:26px;height:26px;color:var(--gold-deep);margin-top:2px}
+.fact h3{font-size:22px;margin-bottom:2px}
+.fact p{color:var(--ink-soft);font-size:14px}
+@media(min-width:860px){.about .wrap{grid-template-columns:1fr 1fr;gap:70px;align-items:center}}
+
+/* catalog */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.chip{border:1px solid var(--line);background:transparent;padding:10px 20px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;border-radius:999px;transition:all .25s}
+.chip:hover{border-color:var(--gold-deep)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.grid{display:grid;gap:26px 22px;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
+.card{display:flex;flex-direction:column;background:var(--white);border:1px solid rgba(197,168,128,.4);border-radius:4px;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s;min-width:0}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold)}
+.card .ph{position:relative;overflow:hidden;background:var(--nude-soft);cursor:pointer;border:0;padding:0;display:block;width:100%}
+.card .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s}
+.card:hover .ph img{transform:scale(1.04)}
+.pill{position:absolute;left:12px;top:12px;background:var(--cream);border:1px solid var(--gold);padding:4px 12px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.pill.lim{background:var(--rose);border-color:var(--rose)}
+.card .bd{display:flex;flex-direction:column;gap:8px;padding:18px 18px 20px;flex:1}
+.card .kind{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep)}
+.card h3{font-size:24px}
+.price{font-family:var(--sans);font-weight:600;font-size:16px;letter-spacing:.02em}
+.card .desc{font-size:13.5px;color:var(--ink-soft);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .meta{font-size:12px;color:var(--ink-soft);border-top:1px solid rgba(197,168,128,.35);padding-top:10px;margin-top:auto}
+.card .meta b{font-weight:600;color:var(--ink)}
+.card .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.card .acts .btn{padding:0 8px;font-size:10.5px;letter-spacing:.1em}
+.sub-h{display:flex;align-items:center;gap:16px;margin:44px 0 22px}
+.sub-h h3{font-size:30px;white-space:nowrap}
+.sub-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.sub-h:first-of-type{margin-top:0}
+
+/* gallery */
+.gal{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+.gal button{position:relative;padding:0;border:1px solid var(--line);background:var(--nude-soft);overflow:hidden;border-radius:3px;aspect-ratio:1;display:block}
+.gal button img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.gal button:hover img{transform:scale(1.07)}
+.gal figcaption,.gal .cap{position:absolute;inset:auto 0 0 0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(44,42,41,.7));color:#fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-align:left;opacity:0;transform:translateY(8px);transition:all .35s}
+.gal button:hover .cap,.gal button:focus-visible .cap{opacity:1;transform:none}
+@media(hover:none){.gal .cap{opacity:1;transform:none}}
+@media(min-width:760px){.gal{grid-template-columns:repeat(3,1fr);gap:16px}.gal button:nth-child(1),.gal button:nth-child(6){grid-column:span 2;aspect-ratio:2/1}}
+.note{font-size:12px;color:var(--ink-soft);margin-top:14px}
+.testi{display:grid;gap:18px;margin-top:56px}
+.t-card{background:var(--white);border:1px solid var(--line);padding:28px 26px;border-radius:3px;display:flex;flex-direction:column;gap:16px;position:relative}
+.t-card::before{content:"\201C";position:absolute;right:20px;top:2px;font-family:var(--serif);font-size:84px;line-height:1;color:var(--gold);opacity:.5}
+.stars{display:flex;gap:3px;color:var(--gold)}
+.stars svg{width:15px;height:15px}
+.t-card blockquote{margin:0;font-family:var(--serif);font-size:21px;line-height:1.4}
+.t-card cite{font-style:normal;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:auto}
+@media(min-width:860px){.testi{grid-template-columns:repeat(3,1fr)}}
+
+/* reservation */
+.resv{background:var(--nude-soft);border-block:1px solid var(--line)}
+.resv .wrap{display:grid;gap:40px}
+.resv .info{display:grid;gap:14px;align-content:start}
+.resv h2{font-size:clamp(34px,5vw,54px)}
+.hours{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);background:var(--cream);padding:12px 18px;font-size:13px;width:fit-content;max-width:100%}
+.hours svg{width:18px;height:18px;color:var(--gold-deep);flex:none}
+.form{background:var(--cream);border:1px solid var(--line);padding:26px 20px;display:grid;gap:20px;border-radius:3px}
+.fld{display:grid;gap:7px;min-width:0}
+.fld>label,.fld>legend,.fld>.lbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+fieldset.fld{border:0;padding:0;margin:0}
+.fld legend{padding:0;margin-bottom:7px}
+.req{color:var(--gold-deep)}
+input[type=text],input[type=date],select,textarea{width:100%;min-height:46px;padding:10px 14px;border:1px solid var(--gold);background:var(--white);color:var(--ink);font:inherit;font-size:15px;border-radius:2px}
+textarea{min-height:96px;resize:vertical}
+.two{display:grid;gap:20px}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.err{font-size:12px;color:#9A3B3B;min-height:0}
+.err:empty{display:none}
+.invalid input,.invalid select,.invalid .dd summary,.invalid .adm{border-color:#9A3B3B}
+.dd{border:1px solid var(--gold);background:var(--white);border-radius:2px}
+.dd+.dd{margin-top:8px}
+.dd summary{list-style:none;cursor:pointer;min-height:46px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:14.5px}
+.dd summary::-webkit-details-marker{display:none}
+.dd summary::after{content:"";width:8px;height:8px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);transform:rotate(45deg);transition:transform .25s;flex:none;margin-right:4px}
+.dd[open] summary::after{transform:rotate(-135deg)}
+.dd-list{border-top:1px solid var(--line);padding:6px 14px 10px;display:grid}
+.dd-list label{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:14px;cursor:pointer}
+.dd-list input{margin-top:4px;width:17px;height:17px;accent-color:var(--gold-deep);flex:none}
+.adm{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.adm label{position:relative;display:block;cursor:pointer}
+.adm input{position:absolute;opacity:0;inset:0}
+.adm span{display:block;text-align:center;padding:13px 10px;border:1px solid var(--gold);background:var(--white);font-size:14px;transition:all .25s}
+.adm input:checked+span{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.adm input:focus-visible+span{outline:2px solid var(--gold-deep);outline-offset:3px}
+.chosen{font-size:12.5px;color:var(--ink-soft)}
+.result{border:1px solid var(--gold);background:var(--white);padding:20px;display:grid;gap:14px;border-radius:3px}
+.result pre{margin:0;white-space:pre-wrap;word-break:break-word;font:400 13.5px/1.6 var(--sans);background:var(--nude-soft);padding:14px;border-left:2px solid var(--gold)}
+.result .row{display:flex;flex-wrap:wrap;gap:10px}
+@media(min-width:900px){.resv .wrap{grid-template-columns:.8fr 1.2fr;gap:64px}.form{padding:34px}}
+
+/* faq */
+.faq{max-width:820px;margin-inline:auto;border-top:1px solid var(--line)}
+.faq .q{border-bottom:1px solid var(--line)}
+.faq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;background:none;border:0;padding:22px 0;font-family:var(--serif);font-size:clamp(20px,3vw,25px);font-weight:500}
+.faq button svg{width:18px;height:18px;flex:none;color:var(--gold-deep);transition:transform .3s}
+.faq button[aria-expanded="true"] svg{transform:rotate(45deg)}
+.faq .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.faq .a>div{overflow:hidden;min-height:0}
+.faq .a p{padding:0 0 22px;color:var(--ink-soft);max-width:680px}
+.faq .q.open .a{grid-template-rows:1fr}
+
+/* footer */
+.ftr{background:var(--ink);color:#EFE6DA;padding-block:64px 28px}
+.ftr .cols{display:grid;gap:36px}
+.ftr .mono{font-size:46px}
+.ftr h4{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:500}
+.ftr p,.ftr li{font-size:14px;color:#D9CDBE}
+.ftr ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.ftr a{text-decoration:none}
+.ftr a:hover{color:var(--gold)}
+.ftr .tag{font-family:var(--serif);font-style:italic;font-size:21px;color:#EFE6DA;margin-top:8px}
+.ftr .ct{display:grid;gap:12px}
+.ftr .ct div b{display:block;font-weight:500;color:#fff}
+.ftr .ct a.wl{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+.ftr .ct svg{width:14px;height:14px}
+.ftr .bot{margin-top:44px;padding-top:20px;border-top:1px solid rgba(197,168,128,.35);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:12px;color:#BFB3A4}
+@media(min-width:860px){.ftr .cols{grid-template-columns:1.3fr .8fr 1fr 1fr}}
+
+/* layers: modal, sheet, lightbox */
+.layer{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(44,42,41,0);transition:background .25s}
+.layer.open{background:rgba(44,42,41,.62)}
+.layer .panel{background:var(--cream);border:1px solid var(--gold);max-width:100%;max-height:100%;overflow:auto;transform:translateY(18px) scale(.98);opacity:0;transition:transform .3s,opacity .3s;border-radius:3px;position:relative}
+.layer.open .panel{transform:none;opacity:1}
+.x{position:absolute;right:10px;top:10px;z-index:2;width:42px;height:42px;display:grid;place-items:center;background:var(--cream);border:1px solid var(--line);border-radius:50%}
+.x svg{width:18px;height:18px}
+.detail{width:min(900px,100%)}
+.detail .in{display:grid}
+.detail .pic img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--nude-soft)}
+.detail .txt{padding:30px 24px 28px;display:grid;gap:12px;align-content:start}
+.detail h3{font-size:clamp(30px,4.5vw,40px)}
+.detail dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:6px 0;font-size:14px;border-block:1px solid var(--line);padding-block:14px}
+.detail dt{color:var(--ink-soft)}
+.detail dd{margin:0;font-weight:500}
+.detail .price{font-size:22px}
+.detail .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+@media(min-width:760px){.detail .in{grid-template-columns:.9fr 1.1fr}.detail .txt{padding:44px 38px 36px}}
+.sheet{width:min(440px,100%);padding:30px 24px 26px;display:grid;gap:14px}
+.sheet h3{font-size:30px}
+.sheet .opts{display:grid;gap:10px;margin-top:4px}
+.sheet .opts a{justify-content:flex-start;gap:12px;min-height:54px;text-transform:none;letter-spacing:.02em;font-size:15px}
+.sheet .opts small{font-size:12px;opacity:.75;margin-left:auto}
+.lb{display:grid;gap:12px;width:min(720px,100%);padding:14px}
+.lb img{width:100%;max-height:70vh;object-fit:contain;background:var(--nude-soft)}
+.lb .bar{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.lb .bar span{font-family:var(--serif);font-size:20px}
+.lb .nv{display:flex;gap:8px}
+.lb .nv button{width:42px;height:42px;border:1px solid var(--line);background:var(--cream);border-radius:50%;display:grid;place-items:center}
+.lb .nv svg{width:18px;height:18px}
+
+/* floating whatsapp */
+.fab{position:fixed;right:calc(max(16px,env(safe-area-inset-right,0px)));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;display:grid;gap:10px;justify-items:end}
+.fab>button{width:58px;height:58px;border-radius:50%;border:0;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);transition:transform .25s}
+.fab>button:hover{transform:scale(1.07)}
+.fab>button svg{width:28px;height:28px}
+.fab .menu{display:none;background:var(--cream);border:1px solid var(--gold);padding:10px;gap:6px;box-shadow:var(--shadow);border-radius:3px;min-width:200px}
+.fab .menu.open{display:grid}
+.fab .menu p{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);padding:4px 8px}
+.fab .menu a{text-decoration:none;padding:11px 12px;border:1px solid var(--line);font-size:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--white)}
+.fab .menu a:hover{background:var(--nude)}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);z-index:120;background:var(--ink);color:var(--cream);padding:12px 20px;font-size:13px;border-left:3px solid var(--gold);opacity:0;pointer-events:none;transition:all .3s;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.reveal.pre{opacity:0;transform:translateY(20px)}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  .reveal.pre{opacity:1;transform:none}
+}
+/* ===== Tema cetar: blush, rose, wine, gold ===== */
+h2{color:var(--wine)}
+.hdr{background:rgba(255,248,244,.82)}
+.hdr.scrolled{background:rgba(255,248,244,.96);border-bottom-color:var(--gold)}
+.hdr::after{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--rose),var(--gold),var(--wine),var(--gold),var(--rose))}
+.mono{color:var(--gold);text-shadow:0 1px 0 rgba(122,22,54,.18)}
+.nav a::after{background:var(--rose-deep)}
+.eyebrow{color:var(--rose-deep);font-weight:600}
+.sec-head .eyebrow::before{content:"";display:inline-block;width:28px;height:1px;background:var(--gold);vertical-align:middle;margin-right:10px}
+.sec-head.center .eyebrow::before{display:none}
+.rule{height:2px;width:72px;background:linear-gradient(90deg,var(--rose),var(--gold))}
+.btn{background:var(--wine);border-color:var(--wine);color:#FFF3E6;box-shadow:0 10px 20px -12px rgba(122,22,54,.8)}
+.btn:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+.btn.ghost{background:transparent;color:var(--wine);border-color:var(--rose-deep);box-shadow:none}
+.btn.ghost:hover{background:var(--blush);color:var(--wine);border-color:var(--rose-deep)}
+.btn.wa{background:#25D366;border-color:#25D366;color:#0f2a1a}
+.btn.wa:hover{background:#1fb858;border-color:#1fb858;color:#0f2a1a}
+.hdr-cta{background:var(--rose-deep);border-color:var(--rose-deep);color:#fff}
+.hdr-cta:hover{background:var(--wine);border-color:var(--wine)}
+.burger{border-color:var(--rose)}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(55% 55% at 88% 18%,rgba(250,217,223,.95),transparent 70%),radial-gradient(45% 45% at 4% 92%,rgba(238,227,248,.95),transparent 70%),var(--cream)}
+.hero h1{color:var(--wine-dark)}
+.hero h1 em{background:linear-gradient(100deg,var(--rose-deep),var(--wine) 55%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--rose-deep)}
+.hero-meta{border-top-color:var(--gold);color:var(--wine)}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta span::before{content:"";width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.arch{z-index:1}
+.arch::before{content:"";position:absolute;inset:14px -12px -14px 12px;border:1.5px solid var(--rose);border-radius:999px 999px 6px 6px}
+.arch .frame{position:relative;z-index:1;border:2px solid var(--gold);background:linear-gradient(160deg,var(--blush),var(--cream));box-shadow:0 34px 60px -34px rgba(122,22,54,.6)}
+.arch .frame img{object-position:center 22%}
+.arch .orb{position:absolute;z-index:3;right:-8px;bottom:-30px;width:36%;aspect-ratio:1;border-radius:50%;object-fit:cover;border:4px solid var(--cream);outline:2px solid var(--gold);box-shadow:var(--shadow)}
+.arch .tag{z-index:3;background:var(--wine);color:#FFE9D0;border-color:var(--gold)}
+.arch .tag b{color:#FFD98A}
+.spk{position:absolute;width:22px;height:22px;fill:var(--gold);animation:tw 3.2s ease-in-out infinite;pointer-events:none;z-index:2}
+.spk.s2{fill:var(--rose);animation-delay:.8s;width:16px;height:16px}
+.spk.s3{animation-delay:1.6s;width:28px;height:28px}
+.spk.s4{fill:var(--rose-deep);animation-delay:2.2s;width:14px;height:14px}
+.spk.s5{animation-delay:1.1s;width:18px;height:18px}
+.spk.s1{top:34px;right:14%}.spk.s2{top:42%;right:2%}.spk.s3{top:8%;left:46%}.spk.s4{bottom:60px;left:3%}.spk.s5{bottom:12%;right:44%}
+@keyframes tw{0%,100%{opacity:.2;transform:scale(.55) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(22deg)}}
+
+/* ticker */
+.marq{background:var(--wine);color:#FBE7C8;overflow:hidden;border-block:2px solid var(--gold);padding:14px 0}
+.marq .track{display:flex;width:max-content;animation:mq 34s linear infinite}
+.marq span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;white-space:nowrap;padding:0 24px}
+.marq i{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);align-self:center;flex:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* promo */
+.promo{color:#FFF3E6;border:0;border-block:2px solid var(--gold);background:radial-gradient(rgba(232,190,100,.38) 1.5px,transparent 2px) 0 0/28px 28px,linear-gradient(115deg,var(--wine-dark),var(--wine) 48%,var(--rose-deep))}
+.promo h2{color:#FFE3A8}
+.promo p.lead{color:#FBE9EC}
+.badge-so{background:var(--gold);color:var(--wine-dark);border-color:var(--gold);font-weight:700}
+.hl div{background:rgba(255,248,244,.1);border-color:var(--gold)}
+.hl b{color:#FFD98A}
+.hl span{color:#F6DCE0}
+.promo .btn{background:var(--gold);border-color:var(--gold);color:var(--wine-dark)}
+.promo .btn:hover{background:var(--cream);border-color:var(--cream)}
+.promo .pair figure{background:var(--cream);border-color:var(--gold);border-width:2px;box-shadow:0 22px 40px -22px rgba(0,0,0,.6);transform:rotate(-3deg)}
+.promo .pair figure:nth-child(2){transform:rotate(3deg)}
+
+/* tentang */
+.about blockquote{color:var(--wine);border-left:2px solid var(--rose)}
+.fact svg{box-sizing:content-box;padding:10px;background:var(--blush);border-radius:50%;color:var(--rose-deep)}
+.facts,.fact{border-color:var(--line)}
+
+/* katalog */
+#koleksi{background:radial-gradient(40% 30% at 100% 0,var(--blush),transparent 70%),radial-gradient(35% 25% at 0 60%,var(--lilac),transparent 70%),var(--cream)}
+.chip{border-color:var(--rose);color:var(--wine);background:#fff}
+.chip:hover{background:var(--blush);border-color:var(--rose-deep)}
+.chip[aria-pressed="true"]{background:linear-gradient(100deg,var(--rose-deep),var(--wine));border-color:var(--wine);color:#fff}
+.sub-h h3{color:var(--wine)}
+.sub-h::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.card{border-color:rgba(216,166,72,.55);box-shadow:0 8px 20px -16px rgba(122,22,54,.6)}
+.card::before{content:"";height:3px;background:linear-gradient(90deg,var(--rose),var(--gold),var(--wine))}
+.card:hover{border-color:var(--rose);box-shadow:0 26px 44px -24px rgba(194,71,106,.7)}
+.card .kind{color:var(--rose-deep);font-weight:600}
+.price{color:var(--wine);font-size:18px}
+.card .meta{border-top-color:var(--blush)}
+.pill{background:var(--cream);border:1px solid var(--gold);color:var(--wine);font-weight:600;box-shadow:0 4px 10px -6px rgba(0,0,0,.4)}
+.pill.bs{background:var(--rose-deep);border-color:var(--rose-deep);color:#fff}
+.pill.sg{background:var(--wine);border-color:var(--gold);color:#FFD98A}
+.pill.na{background:var(--gold);border-color:var(--gold);color:var(--wine-dark)}
+.pill.fav{background:linear-gradient(100deg,var(--rose),var(--rose-deep));border-color:transparent;color:#fff}
+.pill.lim{background:#fff;color:var(--rose-deep);border-color:var(--rose-deep)}
+.pill.inl{position:static;display:inline-block;width:fit-content}
+
+/* galeri */
+#galeri{background:radial-gradient(rgba(194,71,106,.16) 1.5px,transparent 2px) 0 0/26px 26px,var(--blush);border-top:2px solid var(--gold)}
+.gal button{border:3px solid #fff;outline:1px solid var(--gold);box-shadow:0 16px 26px -18px rgba(122,22,54,.7)}
+.gal .cap{background:linear-gradient(transparent,rgba(74,14,36,.85))}
+@media(min-width:760px){.gal button:nth-child(1),.gal button:nth-child(6){grid-column:auto;aspect-ratio:1}}
+.t-card{border-color:var(--gold);background:#fff}
+.t-card::before{color:var(--rose)}
+.t-card:nth-child(2){background:var(--wine);color:#FFF3E6}
+.t-card:nth-child(2) cite{color:#F2D9DE}
+.t-card:nth-child(2)::before{color:var(--gold)}
+.t-card:nth-child(3){background:var(--lilac)}
+
+/* reservasi */
+.resv{background:linear-gradient(160deg,#FCE4E8,#F7D6DD 45%,var(--lilac));border-block:2px solid var(--gold)}
+.hours{background:#fff;border-color:var(--rose-deep)}
+.hours svg{color:var(--rose-deep)}
+.form{background:#fff;border:1px solid var(--line);border-top:4px solid var(--rose-deep);box-shadow:0 34px 50px -36px rgba(122,22,54,.6)}
+input[type=text],input[type=date],select,textarea,.dd,.adm span{border-color:#E3AFBE}
+.adm input:checked+span{background:var(--wine);border-color:var(--wine)}
+.result{border-color:var(--rose-deep)}
+.result pre{border-left-color:var(--rose-deep);background:var(--nude-soft)}
+
+/* faq */
+.faq{border-top-color:var(--gold)}
+.faq .q{border-bottom-color:var(--line)}
+.faq button{color:var(--wine)}
+.faq .q.open button{color:var(--rose-deep)}
+.faq button svg{color:var(--rose-deep)}
+
+/* footer */
+.ftr{background:linear-gradient(180deg,var(--wine),var(--wine-dark));border-top:3px solid var(--gold)}
+.ftr h4{color:#FFD98A}
+.ftr a:hover{color:#FFD98A}
+.ftr .ct a.wl{color:#FFD98A}
+.ftr .bot{border-top-color:rgba(216,166,72,.45)}
+#ig a{color:#FFD98A;text-decoration:underline;text-underline-offset:3px}
+
+/* modal */
+.layer .panel{border:2px solid var(--gold)}
+.x{border-color:var(--rose)}
+.detail .pic{background:var(--blush);display:grid;place-items:center}
+.detail .pic img{aspect-ratio:auto;object-fit:contain;max-height:80vh}
+
+@media(max-width:560px){.arch .orb{right:-4px}.spk.s1{right:6%}}
+@media(prefers-reduced-motion:reduce){.marq .track{animation:none}.spk{animation:none;opacity:.7}}
+
+[hidden]{display:none!important}
+.szs{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:center}
+.szl{width:100%;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.sz{min-height:40px;min-width:48px;padding:0 16px;border:1px solid var(--rose-deep);background:#fff;color:var(--wine);border-radius:999px;font-size:13px;font-weight:500;transition:all .2s}
+.sz:hover{background:var(--blush)}
+.sz.on{background:var(--wine);border-color:var(--wine);color:#FFE3A8}
+/* ===== keranjang, checkout, kontak ===== */
+.hdr-r{display:flex;align-items:center;gap:10px}
+.cartbtn{position:relative;width:44px;height:44px;display:grid;place-items:center;background:none;border:1px solid var(--rose);border-radius:2px;color:var(--wine);transition:background .25s}
+.cartbtn:hover{background:var(--blush)}
+.cartbtn svg{width:21px;height:21px}
+.cartbtn .n{position:absolute;top:-8px;right:-8px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--rose-deep);color:#fff;font-size:11px;font-weight:600;display:grid;place-items:center}
+.pill{white-space:nowrap;max-width:calc(100% - 24px)}
+.card .acts .cartadd{grid-column:1/-1}
+.fab>button{background:linear-gradient(135deg,var(--rose-deep),var(--wine));border:2px solid var(--gold);color:#FFE3A8}
+.fab>button svg{width:26px;height:26px}
+.adc{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);background:#fff;padding:12px 14px;border-radius:3px}
+.adc div{display:grid;min-width:0}
+.adc b{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--wine)}
+.adc span{font-size:14px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.ftr .ct button.wl{background:none;border:1px solid rgba(216,166,72,.6);color:#FFD98A;padding:5px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-top:6px;border-radius:2px}
+.ftr .ct button.wl:hover{background:rgba(216,166,72,.18)}
+.co{width:min(680px,100%);padding:30px 22px 26px;display:grid;gap:16px;align-content:start}
+.co h3{font-size:clamp(28px,4vw,36px);color:var(--wine)}
+.co-view,.co-rc,.co-form{display:grid;gap:16px;min-width:0}
+.co-empty{color:var(--ink-soft);padding:18px;border:1px dashed var(--rose);border-radius:3px;text-align:center}
+.co-item{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.co-item img{width:64px;height:80px;object-fit:cover;border:1px solid var(--line);border-radius:2px}
+.co-item .nm{font-family:var(--serif);font-size:20px;line-height:1.15;color:var(--wine)}
+.co-item .sm{font-size:12px;color:var(--ink-soft);margin-top:2px}
+.co-item select{width:auto;max-width:100%;min-height:38px;padding:4px 10px;margin-top:8px;font-size:13px}
+.co-item .row2{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}
+.co-item .pr{font-weight:600;color:var(--wine)}
+.co-item .rm{background:none;border:0;padding:4px 0;color:var(--rose-deep);font-size:12px;text-decoration:underline}
+.co-sug{background:var(--blush);border:1px dashed var(--rose-deep);padding:14px;border-radius:3px;font-size:13.5px}
+.co-sug button{margin:8px 8px 0 0;padding:7px 12px;border:1px solid var(--rose-deep);background:#fff;color:var(--wine);font-size:12px;border-radius:999px}
+.co-sug button:hover{background:var(--rose-deep);color:#fff}
+.co-on{background:var(--wine);color:#FFE3A8;padding:12px 14px;border-radius:3px;font-size:13.5px;border:1px solid var(--gold)}
+.co-tot{display:grid;gap:6px;font-size:14px;border-top:1px solid var(--line);padding-top:12px}
+.co-tot div{display:flex;justify-content:space-between;gap:16px}
+.co-tot div span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.co-tot .g{font-weight:600;font-size:18px;color:var(--wine);border-top:1px solid var(--line);padding-top:8px;margin-top:4px}
+.chk{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400}
+.chk input{margin-top:4px;width:17px;height:17px;accent-color:var(--wine);flex:none}
+.rcp{background:#fff;border:1px dashed var(--gold-deep);padding:18px;display:grid;gap:8px;border-radius:3px}
+.rc-h{display:grid;gap:2px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.rc-h b{font-family:var(--serif);font-size:24px;color:var(--wine);letter-spacing:.04em}
+.rc-h small,.rc-r small{color:var(--ink-soft);font-size:12px}
+.rc-b{display:grid;gap:1px;font-size:14px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.rc-b span{color:var(--ink-soft)}
+.rc-r{display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.rc-r>span:first-child{display:grid;min-width:0}
+.rc-r>span:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rc-r.t{border-top:1px dashed var(--line);padding-top:8px}
+.rc-r.g{font-weight:600;font-size:18px;color:var(--wine)}
+.rcp-pre{margin:0;white-space:pre-wrap;word-break:break-word;font:400 13px/1.6 var(--sans);background:var(--nude-soft);padding:14px;border-left:2px solid var(--rose-deep)}
+.co-note{font-size:13px;color:var(--ink-soft)}
+.co-h4{font-family:var(--serif);font-size:24px;color:var(--wine);font-weight:500;margin:4px 0 -6px}
+.co .row{display:flex;flex-wrap:wrap;gap:10px}
+.sheet .opts{display:grid;gap:10px}
+</style>
+
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="La Belle Atelier, ke beranda">
+      <span class="mono" aria-hidden="true">LBA</span>
+      <span class="logo-t">LA BELLE<br>ATELIER</span>
+    </a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#home">Home</a><a href="#koleksi">Koleksi</a><a href="#tentang">Tentang Kami</a><a href="#galeri">Galeri</a><a href="#reservasi">Reservasi</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+    </nav>
+    <div class="hdr-r">
+      <button class="cartbtn" id="cartBtn" aria-label="Buka keranjang dan checkout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="n" id="cartN" hidden>0</span></button>
+      <a class="btn sm hdr-cta" href="#reservasi">Reservasi Fitting</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Buka menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+  <div class="mnav" id="mnav">
+    <div class="wrap">
+      <a href="#home">Home</a><a href="#koleksi">Koleksi</a><a href="#tentang">Tentang Kami</a><a href="#galeri">Galeri</a><a href="#reservasi">Reservasi</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+      <a class="btn" href="#reservasi">Reservasi Fitting</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <svg class="spk s1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><svg class="spk s2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><svg class="spk s3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><svg class="spk s4" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><svg class="spk s5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Luxury Bridal Boutique</p>
+      <span class="rule"></span>
+      <h1>Timeless Elegance for <em>Your Special Day.</em></h1>
+      <p class="sub" style="margin-top:22px">Koleksi eksklusif gaun dan heels pengantin baru dengan desain mewah, detail presisi, dan harga terjangkau.</p>
+      <div class="cta">
+        <a class="btn" href="#koleksi">Lihat Koleksi</a>
+        <a class="btn ghost" href="#reservasi">Buat Janji Fitting</a>
+      </div>
+      <div class="hero-meta"><span>100% Brand New</span><span>Ready Stock</span><span>Fitting Senin–Jumat</span></div>
+    </div>
+    <div class="arch reveal">
+      <div class="frame"><img id="heroImg" alt="Gaun pengantin mermaid champagne dengan cape, koleksi La Belle Atelier" width="400" height="500"></div>
+      <img class="orb" id="heroOrb" alt="Heels pengantin pink dengan pita organza dan kristal" width="400" height="400">
+      <div class="tag">Signature Masterpiece<b>Champagne Mermaid</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="track"><span>100% Brand New</span><i></i><span>Ready Stock</span><i></i><span>Gratis Ongkir Pulau Jawa</span><i></i><span>Potongan Rp25.000 Paket Gaun + Heels</span><i></i><span>Fitting Senin–Jumat</span><i></i><span>Gaun &amp; Heels Pengantin Baru</span><i></i><span>100% Brand New</span><i></i><span>Ready Stock</span><i></i><span>Gratis Ongkir Pulau Jawa</span><i></i><span>Potongan Rp25.000 Paket Gaun + Heels</span><i></i><span>Fitting Senin–Jumat</span><i></i><span>Gaun &amp; Heels Pengantin Baru</span><i></i></div></div>
+
+<section class="promo" id="promo" aria-labelledby="promo-h">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="badge-so">SPECIAL OFFER</span>
+      <h2 id="promo-h">SPECIAL BRIDAL BUNDLING!</h2>
+      <p class="lead">Dapatkan Potongan Harga Rp25.000 + Gratis Ongkir (Pulau Jawa) untuk setiap pembelian paket 1 Gaun Pengantin + 1 Heels Pengantin pilihan Anda.</p>
+      <div class="hl"><div><b>Rp25.000</b><span>Potongan harga</span></div><div><b>Gratis Ongkir</b><span>Pulau Jawa</span></div></div>
+      <p style="margin-top:26px"><a class="btn" href="#koleksi">Pilih Paket Anda</a></p>
+    </div>
+    <div class="pair reveal" aria-hidden="false">
+      <figure><img id="promoDress" alt="Gaun pengantin pilihan untuk paket bundling" loading="lazy" width="400" height="500"></figure>
+      <figure><img id="promoHeel" alt="Heels pengantin pilihan untuk paket bundling" loading="lazy" width="400" height="500"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="tentang" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Tentang Kami</p>
+      <span class="rule"></span>
+      <h2 id="about-h" style="font-size:clamp(32px,5vw,50px);margin-bottom:24px">La Belle Atelier</h2>
+      <blockquote>Setiap detail dirancang untuk merayakan hari paling berharga dalam hidup Anda.</blockquote>
+    </div>
+    <div class="facts reveal">
+      <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9.3l-4 4 1 5.7-5-2.8L7 19l1-5.7-4-4 5.5-.8z"/></svg><div><h3>100% Brand New</h3><p>Semua gaun dan heels adalah produk baru untuk dibeli dan menjadi hak milik Anda sepenuhnya.</p></div></div>
+      <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg><div><h3>Ready Stock</h3><p>Enam gaun pengantin dan enam heels pengantin siap dipesan.</p></div></div>
+      <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><h3>Fitting di Butik</h3><p>Jadwalkan kunjungan untuk mencoba koleksi, Senin–Jumat pukul 09.00–21.00 WIB.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="koleksi" aria-labelledby="kol-h" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Koleksi</p>
+      <h2 id="kol-h">Gaun &amp; Heels Pengantin</h2>
+      <p>Seluruh produk baru dan ready stock. Pilih produk, lalu pesan lewat WhatsApp admin pilihan Anda.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter kategori produk">
+      <button class="chip" data-f="all" aria-pressed="true">Semua Produk</button>
+      <button class="chip" data-f="gaun" aria-pressed="false">Gaun Pengantin</button>
+      <button class="chip" data-f="heels" aria-pressed="false">Heels Pengantin</button>
+    </div>
+    <div id="catalog" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="sec" id="galeri" aria-labelledby="gal-h" style="background:var(--cream);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Galeri Real Pict</p>
+      <h2 id="gal-h">Every Detail Tells a Story.</h2>
+      <p>Dari payet hingga pita, setiap detail dikerjakan dengan presisi. Ketuk foto untuk memperbesar.</p>
+    </div>
+    <div class="gal reveal" id="gallery"></div>
+    <div class="testi" id="testi" aria-label="Testimoni pelanggan"></div>
+  </div>
+</section>
+
+<section class="sec resv" id="reservasi" aria-labelledby="res-h">
+  <div class="wrap">
+    <div class="info reveal">
+      <p class="eyebrow">Reservasi Fitting</p>
+      <span class="rule" style="margin:4px 0"></span>
+      <h2 id="res-h">Your Perfect Dress Awaits.</h2>
+      <p style="color:var(--ink-soft);max-width:440px">Jadwalkan kunjungan Anda dan temukan koleksi yang paling sesuai untuk hari istimewa.</p>
+      <div class="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Senin–Jumat, pukul 09.00–21.00 WIB</span></div>
+      <p style="font-size:13px;color:var(--ink-soft);max-width:440px">Formulir ini menyusun ringkasan jadwal yang bisa Anda salin dan kirim ke admin pilihan. Jadwal baru terkonfirmasi setelah admin membalas.</p>
+    </div>
+    <div class="reveal">
+      <form class="form" id="resvForm" novalidate>
+        <div class="fld" id="f-name"><label for="r-name">Nama Lengkap <span class="req">*</span></label><input type="text" id="r-name" autocomplete="name" placeholder="Nama Anda"><span class="err" id="e-name"></span></div>
+        <div class="two">
+          <div class="fld" id="f-date"><label for="r-date">Tanggal Kunjungan <span class="req">*</span></label><input type="date" id="r-date"><span class="err" id="e-date"></span></div>
+          <div class="fld" id="f-time"><label for="r-time">Jam Kunjungan <span class="req">*</span></label><select id="r-time"><option value="">Pilih jam</option></select><span class="err" id="e-time"></span></div>
+        </div>
+        <div class="fld" id="f-prod"><span class="lbl">Produk yang Ingin Dicoba <span class="req">*</span></span>
+          <div><details class="dd" id="dd-gaun"><summary><span>Gaun Pengantin <em class="cnt" style="font-style:normal;color:var(--gold-deep)"></em></span></summary><div class="dd-list"></div></details>
+          <details class="dd" id="dd-heels"><summary><span>Heels Pengantin <em class="cnt" style="font-style:normal;color:var(--gold-deep)"></em></span></summary><div class="dd-list"></div></details></div>
+          <p class="chosen" id="chosen">Anda boleh memilih lebih dari satu produk.</p><span class="err" id="e-prod"></span>
+        </div>
+        <fieldset class="fld" id="f-adm"><legend>Pilih Admin <span class="req">*</span></legend><div class="adm" id="adm"></div><span class="err" id="e-adm"></span></fieldset>
+        <div class="fld"><label for="r-note">Catatan Tambahan <span style="text-transform:none;letter-spacing:0;color:var(--ink-soft)">(opsional)</span></label><textarea id="r-note" placeholder="Contoh: tanggal acara, ukuran badan, atau pertanyaan lain"></textarea></div>
+        <button class="btn" type="submit">Buat Ringkasan Jadwal</button>
+      </form>
+      <div class="result" id="result" hidden style="margin-top:18px">
+        <h3 style="font-size:26px">Ringkasan jadwal siap disalin</h3>
+        <pre id="resPre"></pre>
+        <p style="font-size:13px;color:var(--ink-soft)">Reservasi belum terkirim. Salin ringkasan ini dan nomor admin, lalu hubungi admin lewat aplikasi Anda. Jadwal terkonfirmasi setelah admin membalas.</p>
+        <div class="row"><button class="btn" type="button" id="resCopy">Salin Ringkasan</button><button class="btn ghost" type="button" id="resCopyNo">Salin Nomor Admin</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head center reveal"><p class="eyebrow">FAQ &amp; Kebijakan Toko</p><h2 id="faq-h">Pertanyaan yang Sering Diajukan</h2></div>
+    <div class="faq reveal" id="faqList"></div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr" id="kontak">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="logo" href="#home" aria-label="La Belle Atelier"><span class="mono" aria-hidden="true">LBA</span><span class="logo-t" style="color:#fff">LA BELLE<br>ATELIER</span></a>
+        <p class="tag">Timeless Elegance for Your Special Day.</p>
+        <p style="margin-top:14px;max-width:300px">Setiap detail dirancang untuk merayakan hari paling berharga dalam hidup Anda.</p>
+      </div>
+      <div><h4>Navigasi</h4><ul><li><a href="#home">Home</a></li><li><a href="#koleksi">Koleksi</a></li><li><a href="#tentang">Tentang Kami</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#reservasi">Reservasi</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h4>Jam Operasional</h4><p>Senin–Jumat<br>09.00–21.00 WIB</p><div id="addr" style="margin-top:14px"></div><h4 style="margin-top:22px">Instagram</h4><p id="ig"></p></div>
+      <div><h4>Layanan Pelanggan</h4><div class="ct" id="contacts"></div></div>
+    </div>
+    <div class="bot"><span>&copy; <span id="yr"></span> La Belle Atelier. All rights reserved.</span><span>Timeless Elegance for Your Special Day.</span></div>
+  </div>
+</footer>
+
+<!-- tombol kontak melayang (tanpa link eksternal) -->
+<div class="fab" id="fab">
+  <button id="fabBtn" aria-haspopup="dialog" aria-label="Hubungi admin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg></button>
+</div>
+
+<!-- detail modal -->
+<div class="layer" id="detailLayer" hidden>
+  <div class="panel detail" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+    <button class="x" data-close aria-label="Tutup detail produk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="in" id="detailIn"></div>
+  </div>
+</div>
+
+<!-- checkout instan -->
+<div class="layer" id="coLayer" hidden style="z-index:110">
+  <div class="panel co" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+    <button class="x" data-close aria-label="Tutup checkout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div><p class="eyebrow">Checkout Instan</p><h3 id="coTitle">Pesanan Anda</h3></div>
+    <div id="coView" class="co-view">
+      <div id="coItems"></div>
+      <span class="err" id="e-coitems"></span><span class="err" id="e-cosize"></span>
+      <div id="coSug"></div>
+      <div id="coTot" class="co-tot"></div>
+      <form id="coForm" class="co-form" novalidate>
+        <div class="fld" id="f-coname"><label for="co-name">Nama Pembeli <span class="req">*</span></label><input type="text" id="co-name" autocomplete="name"><span class="err" id="e-coname"></span></div>
+        <div class="fld" id="f-cophone"><label for="co-phone">No. HP <span class="req">*</span></label><input type="text" id="co-phone" inputmode="tel" autocomplete="tel" placeholder="0812 3456 7890"><span class="err" id="e-cophone"></span></div>
+        <div class="fld" id="f-coaddr"><label for="co-addr">Alamat Pengiriman <span class="req">*</span></label><textarea id="co-addr" autocomplete="street-address" placeholder="Jalan, nomor, kecamatan, kota, provinsi, kode pos"></textarea><span class="err" id="e-coaddr"></span></div>
+        <div class="fld"><label for="co-dest">Tujuan Pengiriman</label><select id="co-dest"><option value="jawa">Pulau Jawa</option><option value="luar">Luar Pulau Jawa</option></select></div>
+        <div class="fld" id="f-copay"><label for="co-pay">Metode Pembayaran <span class="req">*</span></label>
+          <select id="co-pay"><option value="">Pilih metode pembayaran</option>
+            <optgroup label="Transfer Bank"><option>Transfer Bank BCA</option><option>Transfer Bank Mandiri</option><option>Transfer Bank BRI</option></optgroup>
+            <optgroup label="E-Wallet"><option>Dana</option><option>OVO</option><option>GoPay</option><option>QRIS</option></optgroup></select><span class="err" id="e-copay"></span></div>
+        <div class="fld" id="co-sizeok-w" hidden><label class="chk"><input type="checkbox" id="co-sizeok"><span>Saya sudah memeriksa detail ukuran gaun (lingkar dada dan panjang gaun) dan sesuai dengan ukuran saya.</span></label><span class="err" id="e-cosizeok"></span></div>
+        <button class="btn" type="submit">Konfirmasi &amp; Buat Ringkasan Order</button>
+      </form>
+    </div>
+    <div id="coReceipt" class="co-rc" hidden>
+      <div class="rcp" id="rcpView"></div>
+      <div class="fld"><span class="lbl">Teks konfirmasi siap salin</span><pre id="rcpPre" class="rcp-pre"></pre></div>
+      <p class="co-note">Pesanan belum terkirim dan belum tercatat di sistem. Salin teks di atas, lalu kirim ke salah satu admin di bawah. Pesanan diproses setelah admin mengonfirmasi ketersediaan stok dan info pembayaran.</p>
+      <div class="row"><button class="btn" id="rcpCopy" type="button">Salin Teks Konfirmasi</button><button class="btn ghost" id="rcpBack" type="button">Ubah Pesanan</button></div>
+      <h4 class="co-h4">Kontak Admin</h4>
+      <div class="opts" id="rcpAdm"></div>
+      <button class="btn ghost" id="rcpDone" type="button">Selesai</button>
+    </div>
+  </div>
+</div>
+
+<!-- kontak admin -->
+<div class="layer" id="contactLayer" hidden style="z-index:110">
+  <div class="panel sheet" role="dialog" aria-modal="true" aria-labelledby="ctTitle">
+    <button class="x" data-close aria-label="Tutup kontak admin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p class="eyebrow">Layanan Pelanggan</p>
+    <h3 id="ctTitle">Hubungi Admin</h3>
+    <p style="color:var(--ink-soft);font-size:14px">Senin–Jumat, 09.00–21.00 WIB. Salin nomor admin, lalu hubungi lewat aplikasi WhatsApp atau telepon Anda.</p>
+    <div class="opts" id="ctList"></div>
+  </div>
+</div>
+
+<!-- lightbox -->
+<div class="layer" id="lbLayer" hidden style="z-index:105">
+  <div class="panel lb" role="dialog" aria-modal="true" aria-label="Foto galeri">
+    <button class="x" data-close aria-label="Tutup foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <img id="lbImg" alt="">
+    <div class="bar"><span id="lbCap"></span><div class="nv"><button id="lbPrev" aria-label="Foto sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button><button id="lbNext" aria-label="Foto berikutnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   KONFIGURASI: ubah di sini saja
+   ===================================================================== */
+const CONFIG = {
+  admins: [
+    { id: 'baiti',  name: 'Kak Baiti',  phone: '6287866343106', display: '+62 878-6634-3106' },
+    { id: 'danika', name: 'Kak Danika', phone: '6283140503437', display: '+62 831-4050-3437' }
+  ],
+  instagram: { handle: '@labelleatelier', url: 'https://www.instagram.com/labelleatelier/' },
+  address: '',                                             // isi alamat butik; kosong = tidak ditampilkan
+  hours: { startHour: 9, lastSlotHour: 20, lastSlotMinute: 30, step: 30 }, // slot terakhir 20.30 (tutup 21.00)
+  workDays: [1, 2, 3, 4, 5]                                // 1=Senin ... 5=Jumat
+};
+
+/* =====================================================================
+   FOTO PRODUK: file ada di folder img/ dengan nama = id produk (mis. img/gaun-1.jpg).
+   image = thumbnail kartu (rasio 4:5), full = foto besar di detail produk.
+   ===================================================================== */
+const BADGE = { 'Standar Butik':'', 'Menengah':'na', 'Menengah Atas':'fav', 'Premium':'bs', 'Best Seller / Premium':'bs', 'Eksklusif':'sg', 'Signature Masterpiece':'sg', 'Signature Luxury':'sg' };
+
+/* =====================================================================
+   DATA PRODUK: ubah harga, deskripsi, ukuran, dan gambar di sini
+   ===================================================================== */
+const PRODUCTS = [
+  { id:'gaun-5', cat:'gaun', no:5, name:'Romantic Pinkish-Nude Lace Gown', badge:'Standar Butik', price:2250000, size:'Size M', bust:'88–92 cm', length:'145 cm',
+    desc:'Gaun romantis warna soft nude berpadu renda putih dan sulaman benang merah muda lembut. Desain kerah tinggi transparan dengan jubah capelet tipis menghadirkan nuansa vintage-royal yang manis.', image:'', full:'' },
+  { id:'gaun-4', cat:'gaun', no:4, name:'Modern Halter Corset Gown', badge:'Menengah', price:2750000, size:'All Size (Fit to M)', bust:'86–92 cm', length:'142 cm',
+    desc:'Gaun kontemporer dengan korset transparan yang mempertegas bentuk pinggang dan kerah halter-cross unik. Aksen selendang bahu melintang dan belahan rok tinggi (slit) memberikan sentuhan elegan bagi pengantin modern.', image:'', full:'' },
+  { id:'gaun-3', cat:'gaun', no:3, name:'Silver Sparkle Mermaid with Long Trailing Cape', badge:'Menengah Atas', price:3450000, size:'Size S–M', bust:'84–90 cm', length:'150 cm (dengan ekor)',
+    desc:'Gaun mermaid perak berkilau dengan potongan dada sweetheart. Dilengkapi jubah panjang dramatis (long trailing cape) di kedua bahu yang menyapu lantai, menciptakan kesan megah dan berkelas di hari bahagia.', image:'', full:'' },
+  { id:'gaun-1', cat:'gaun', no:1, name:'Classic Off-Shoulder Ballgown', badge:'Best Seller / Premium', price:3950000, size:'All Size (Fit to L)', bust:'90–96 cm', length:'145 cm',
+    desc:'Gaun pengantin mewah bergaya ballgown dengan potongan off-shoulder dan lengan puff berbahan tulle transparan yang anggun. Korset dipenuhi payet berkilau dengan rok mengembang dan bordir bunga menjuntai, memberikan kesan megah layaknya putri kerajaan.', image:'', full:'' },
+  { id:'gaun-6', cat:'gaun', no:6, name:'Crystal Elegance Mermaid Gown', badge:'Eksklusif', price:4450000, size:'Size L', bust:'92–98 cm', length:'147 cm',
+    desc:'Gaun mermaid eksklusif dengan hiasan kristal mewah di leher dan dada. Dilengkapi ekor rok berlapis tulle berumbai (ruffles) lembut di belakang, memancarkan kemewahan maksimal dan siluet tubuh yang jenjang.', image:'', full:'' },
+  { id:'gaun-2', cat:'gaun', no:2, name:'Champagne Mermaid Gown with Cape', badge:'Signature Masterpiece', price:4850000, size:'Size M–L', bust:'88–94 cm', length:'148 cm',
+    desc:'Siluet mermaid elegan bernuansa soft nude/champagne yang memeluk tubuh indah. Dilengkapi jubah (cape) tulle lembut beraksen bulu halus di bahu dan taburan glitter menyeluruh untuk tampilan yang sangat glamor dan modern.', image:'', full:'' },
+
+  { id:'heels-3', cat:'heels', no:3, name:'Champagne Ribbon Stiletto', badge:'Standar Butik', price:330000, size:'36–40',
+    desc:'Model stiletto warna champagne berkilau dengan tali pergelangan kaki elegan dan hiasan pita organza berlapis kristal di ujung depan, memadukan kenyamanan dan kemewahan.', image:'', full:'' },
+  { id:'heels-4', cat:'heels', no:4, name:'Classic Silver Pearl Draped Heels', badge:'Menengah', price:410000, size:'37–40',
+    desc:'Heels perak berkilau dengan rantai mutiara dan kupu-kupu kecil menjuntai, ditambah pita organza putih bersih di tumit menciptakan sentuhan ala sepatu Cinderella.', image:'', full:'' },
+  { id:'heels-1', cat:'heels', no:1, name:'Pink Ribbon Crystal Pumps', badge:'Menengah Atas', price:465000, size:'36–40',
+    desc:'Sepatu hak tinggi warna soft pink berkilau dengan pita organza besar di depan dan belakang. Dihiasi permata mewah serta gantungan rantai manik-manik yang manis dan feminin.', image:'', full:'' },
+  { id:'heels-2', cat:'heels', no:2, name:'Noir Gothic-Chic Bow Pumps', badge:'Premium', price:530000, size:'35–39',
+    desc:'Heels satin hitam elegan berhias pita bermotif, renda halus, gesper permata hitam, serta rantai emas gantung dengan detail mutiara untuk tampilan yang unik, berani, dan mewah.', image:'', full:'' },
+  { id:'heels-5', cat:'heels', no:5, name:'Ivory Ruffled Pearl Bridal Pumps', badge:'Eksklusif', price:595000, size:'36–39',
+    desc:'Sepatu pengantin warna ivory dengan desain bertumpuk (ruffles) organza transparan di pergelangan kaki. Dihiasi pita bunga mutiara dan tali beruntai mutiara yang sangat klasik dan anggun.', image:'', full:'' },
+  { id:'heels-6', cat:'heels', no:6, name:'Elegant Pearl-Chains Stiletto', badge:'Signature Luxury', price:650000, size:'36–40',
+    desc:'Heels premium dengan kombinasi tali pergelangan berhiaskan mutiara dan untaian rantai permata menjuntai di sisi tumit, membuat kaki terlihat lebih jenjang dan berkelas.', image:'', full:'' }
+];
+
+PRODUCTS.forEach(p => { p.image = 'img/' + p.id + '.jpg'; p.full = 'img/' + p.id + '-full.jpg'; });
+
+/* ---------- galeri: detail dari foto produk ---------- */
+const GALLERY = [
+  { label:'Detail payet gaun', image:'img/gal-1.jpg' },
+  { label:'Tekstur bahan tulle', image:'img/gal-2.jpg' },
+  { label:'Detail bordir dan renda', image:'img/gal-3.jpg' },
+  { label:'Detail kristal dan mutiara', image:'img/gal-4.jpg' },
+  { label:'Sol bagian dalam heels', image:'img/gal-5.jpg' },
+  { label:'Detail pita dan aksesori sepatu', image:'img/gal-6.jpg' }
+];
+
+const TESTIMONIALS = [
+  { text:'Awalnya ragu karena harganya terjangkau banget untuk gaun baru, pas sampai ternyata payetnya rapat dan mewah! Pas banget di badan.', who:'Nadia P.', what:'Pembeli Gaun 1' },
+  { text:'Heels-nya empuk dan tidak bikin kaki lecet walau berdiri berjam-jam di pelaminan. Admin Baiti juga sangat ramah bantu pilih ukuran.', who:'Clarissa M.', what:'Pembeli Heels 3' },
+  { text:'Suka banget sama detail jubah Gaun 2, kelihatan seperti gaun butik jutaan rupiah.', who:'Salsabila R.', what:'Pembeli Gaun 2 & Heels 5' }
+];
+
+const FAQ = [
+  ['Apakah produk ini disewakan atau dijual baru?','Semua koleksi gaun dan heels di La Belle Atelier adalah produk baru (100% Brand New) untuk dibeli dan menjadi hak milik Anda sepenuhnya.'],
+  ['Apakah bisa menukar ukuran jika kebesaran atau kekecilan?','Bisa, khusus untuk pembelian heels, penukaran ukuran dapat dilakukan maksimal 2x24 jam setelah barang diterima dengan syarat barang belum dipakai berjalan di luar ruangan dan tag masih terpasang.'],
+  ['Metode pembayaran apa saja yang tersedia?','Kami menerima pembayaran melalui Transfer Bank (BCA, Mandiri, BRI) serta E-Wallet (Dana, OVO, GoPay, QRIS).'],
+  ['Bagaimana proses pengirimannya?','Pengiriman ke seluruh Indonesia menggunakan ekspedisi reguler/kargo dengan packing kotak eksklusif agar gaun tidak kusut dan sepatu tetap aman. Untuk area sekitar toko, tersedia pengiriman instan (GoSend/GrabExpress).']
+];
+
+/* =====================================================================
+   LOGIKA
+   ===================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const rp = n => 'Rp' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+const ICON = {
+  star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 16.9 5.9 20.4l1.5-6.8L2.2 9l6.9-.7z"/></svg>',
+  wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.1L2 22l5-1.6A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 15l-.3-.2-2.9.9.9-2.8-.2-.3A8.1 8.1 0 0 1 12.04 3.8z"/></svg>',
+  plus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>'
+};
+const byId = id => PRODUCTS.find(p => p.id === id);
+const label = p => (p.cat === 'gaun' ? 'Gaun ' : 'Heels ') + p.no + ' — ' + p.name;
+const kind = p => p.cat === 'gaun' ? 'Gaun Pengantin' : 'Heels Pengantin';
+
+function toast(msg){
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 3200);
+}
+
+/* ---------- layers (modal / sheet / lightbox) ---------- */
+const layers = [];
+function openLayer(el){
+  el.hidden = false; void el.offsetWidth; el.classList.add('open');
+  layers.push({ el, prev: document.activeElement });
+  document.body.classList.add('lock');
+  const f = $('[data-close]', el); if (f) f.focus();
+}
+function closeLayer(el){
+  const i = layers.findIndex(l => l.el === el); if (i < 0) return;
+  const { prev } = layers.splice(i, 1)[0];
+  el.classList.remove('open');
+  setTimeout(() => { if (!layers.some(l => l.el === el)) el.hidden = true; }, 230);
+  if (!layers.length) document.body.classList.remove('lock');
+  if (prev && prev.focus) { try { prev.focus(); } catch (e) {} }
+}
+document.addEventListener('click', e => {
+  const layer = e.target.closest('.layer');
+  if (!layer) return;
+  if (e.target === layer || e.target.closest('[data-close]')) closeLayer(layer);
+});
+document.addEventListener('keydown', e => {
+  const top = layers[layers.length - 1]; if (!top) return;
+  if (e.key === 'Escape') { closeLayer(top.el); return; }
+  if (top.el.id === 'lbLayer'){ if (e.key === 'ArrowLeft') lbStep(-1); if (e.key === 'ArrowRight') lbStep(1); }
+  if (e.key === 'Tab'){
+    const f = $$('button,a[href],input,select,textarea,[tabindex]:not([tabindex="-1"])', top.el).filter(x => !x.disabled && x.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+});
+
+/* ---------- header ---------- */
+const hdr = $('#hdr'), burger = $('#burger'), mnav = $('#mnav');
+const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 24);
+window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+burger.addEventListener('click', () => {
+  const open = !mnav.classList.contains('open');
+  mnav.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', String(open));
+  burger.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+});
+$$('#mnav a').forEach(a => a.addEventListener('click', () => { mnav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
+
+/* ---------- hero & promo images ---------- */
+function setImg(id, src){ const el = $(id); if (el) el.src = src; }
+setImg('#heroImg', byId('gaun-2').full);
+setImg('#heroOrb', byId('heels-1').full);
+setImg('#promoDress', byId('gaun-1').image);
+setImg('#promoHeel', byId('heels-1').image);
+
+/* ---------- katalog ---------- */
+function cardHTML(p){
+  const bcls = BADGE[p.badge] || '';
+  const meta = p.cat === 'gaun'
+    ? `<b>Ukuran:</b> ${p.size}<br>Lingkar dada ${p.bust} · Panjang ${p.length}`
+    : `<b>Ukuran:</b> ${p.size}`;
+  return `<article class="card" data-id="${p.id}">
+    <button class="ph" data-act="detail" data-id="${p.id}" aria-label="Lihat detail ${p.name}">
+      <img src="${p.image}" alt="${label(p)}" loading="lazy" width="400" height="500">
+      ${p.badge ? `<span class="pill ${bcls}">${p.badge}</span>` : ''}
+    </button>
+    <div class="bd">
+      <span class="kind">${kind(p)}</span>
+      <h3>${p.name}</h3>
+      <span class="price">${rp(p.price)}</span>
+      <p class="desc">${p.desc}</p>
+      <p class="meta">${meta}</p>
+      <div class="acts">
+        <button class="btn ghost sm" data-act="detail" data-id="${p.id}">Lihat Detail</button>
+        <button class="btn sm" data-act="buy" data-id="${p.id}">Beli Sekarang</button>
+        <button class="btn ghost sm cartadd" data-act="cart" data-id="${p.id}">+ Tambah ke Keranjang</button>
+      </div>
+    </div></article>`;
+}
+let filter = 'all';
+function renderCatalog(){
+  const host = $('#catalog');
+  const groups = [['gaun','Gaun Pengantin'],['heels','Heels Pengantin']].filter(g => filter === 'all' || filter === g[0]);
+  host.innerHTML = groups.map(([k, t]) => {
+    const items = PRODUCTS.filter(p => p.cat === k);
+    return `<div class="sub-h"><h3>${t}</h3></div><div class="grid">${items.map(cardHTML).join('')}</div>`;
+  }).join('');
+}
+$$('.filters .chip').forEach(b => b.addEventListener('click', () => {
+  filter = b.dataset.f;
+  $$('.filters .chip').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  renderCatalog();
+}));
+$('#catalog').addEventListener('click', e => {
+  const t = e.target.closest('[data-act]'); if (!t) return;
+  const p = byId(t.dataset.id); if (!p) return;
+  if (t.dataset.act === 'detail') openDetail(p); else if (t.dataset.act === 'buy') buyNow(p.id); else addToCart(p.id);
+});
+
+/* ---------- detail ---------- */
+function openDetail(p){
+  const rows = p.cat === 'gaun'
+    ? `<dt>Ukuran</dt><dd>${p.size}</dd><dt>Lingkar dada</dt><dd>${p.bust}</dd><dt>Panjang gaun</dt><dd>${p.length}</dd><dt>Kondisi</dt><dd>Baru, ready stock</dd>`
+    : `<dt>Ukuran</dt><dd>${p.size}</dd><dt>Kondisi</dt><dd>Baru, ready stock</dd>`;
+  $('#detailIn').innerHTML = `<div class="pic"><img src="${p.full}" alt="${label(p)}" width="400" height="500"></div>
+    <div class="txt"><span class="kind eyebrow">${kind(p)}</span>
+    ${p.badge ? `<span><span class="pill inl ${BADGE[p.badge] || ''}">${p.badge}</span></span>` : ''}
+    <h3 id="dTitle">${p.name}</h3><span class="price">${rp(p.price)}</span>
+    <p style="color:var(--ink-soft)">${p.desc}</p><dl>${rows}</dl>
+    <div class="acts"><button class="btn" id="dOrder">Beli Sekarang</button><button class="btn ghost" id="dCart">Tambah ke Keranjang</button><button class="btn ghost" id="dTry">Coba di Butik</button></div></div>`;
+  $('#dOrder').onclick = () => buyNow(p.id);
+  $('#dCart').onclick = () => addToCart(p.id);
+  $('#dTry').onclick = () => { closeLayer($('#detailLayer')); setTimeout(() => { selectProduct(p.id); $('#reservasi').scrollIntoView({ behavior: 'smooth' }); }, 260); };
+  openLayer($('#detailLayer'));
+}
+
+/* ---------- util: salin teks ---------- */
+const esc = v => String(v).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+function copyText(text, okMsg, selEl){
+  const fb = () => {
+    if (selEl){ const rg = document.createRange(); rg.selectNodeContents(selEl); const sl = getSelection(); sl.removeAllRanges(); sl.addRange(rg); toast('Teks dipilih. Salin secara manual.'); }
+    else toast('Salin manual: ' + text);
+  };
+  try { navigator.clipboard.writeText(text).then(() => toast(okMsg || 'Disalin.'), fb); } catch (e) { fb(); }
+}
+document.addEventListener('click', e => { const b = e.target.closest('[data-copy]'); if (b) copyText(b.dataset.copy, b.dataset.msg || 'Nomor disalin.'); });
+function adminCard(a){
+  return `<div class="adc"><div><b>${esc(a.name)}</b><span>${esc(a.display)}</span></div><button class="btn ghost sm" type="button" data-copy="${esc(a.display)}" data-msg="Nomor ${esc(a.name)} disalin.">Salin Nomor</button></div>`;
+}
+
+/* ---------- keranjang & checkout instan ---------- */
+const cart = [];
+const BUNDLE_DISCOUNT = 25000;
+const isGaun = p => p.cat === 'gaun';
+function sizesOf(p){
+  if (isGaun(p)){
+    const m = p.size.match(/^Size ([SML])(?:–([SML]))?$/);
+    if (m){ const o = ['S', 'M', 'L'], a = o.indexOf(m[1]), b = m[2] ? o.indexOf(m[2]) : a; return o.slice(a, b + 1).map(v => ({ v, t:'Size ' + v })); }
+    return [{ v:'All Size', t:p.size }];
+  }
+  const m = p.size.match(/(\d+)\D+(\d+)/), out = [];
+  if (m) for (let i = +m[1]; i <= +m[2]; i++) out.push({ v:String(i), t:String(i) });
+  return out;
+}
+const sizeText = (c, p) => isGaun(p) ? (c.size === 'All Size' ? p.size : 'Size ' + c.size) : 'Ukuran ' + c.size;
+const inCart = id => cart.find(c => c.id === id);
+function updateCartBadge(){ const b = $('#cartN'); b.textContent = cart.length; b.hidden = !cart.length; }
+function addToCart(id, silent){
+  if (inCart(id)){ if (!silent) toast('Produk ini sudah ada di keranjang.'); return false; }
+  const op = sizesOf(byId(id)); cart.push({ id, size:op.length === 1 ? op[0].v : '' }); updateCartBadge();
+  if (!silent) toast(byId(id).name + ' ditambahkan ke keranjang.');
+  return true;
+}
+function calc(){
+  const items = cart.map(c => ({ c, p:byId(c.id) }));
+  const g = items.filter(x => isGaun(x.p)).length, h = items.length - g, pairs = Math.min(g, h);
+  const sub = items.reduce((a, x) => a + x.p.price, 0), disc = pairs * BUNDLE_DISCOUNT;
+  return { items, g, h, pairs, sub, disc, total:sub - disc, java:$('#co-dest').value === 'jawa' };
+}
+function ongkirText(k){
+  if (k.pairs > 0) return k.java ? 'Gratis (Pulau Jawa)' : 'Dihitung admin (gratis ongkir khusus Pulau Jawa)';
+  return 'Dihitung admin';
+}
+function renderCo(){
+  const k = calc(); updateCartBadge();
+  $('#coItems').innerHTML = k.items.length ? k.items.map(({ c, p }) => {
+    const meta = isGaun(p) ? `${p.size} · Dada ${p.bust} · Panjang ${p.length}` : `Nomor ukuran ${p.size}`;
+    const sel = `<div class="szs" role="group" aria-label="Pilih ukuran ${esc(p.name)}"><span class="szl">Pilih ukuran</span>${sizesOf(p).map(o => `<button type="button" class="sz${c.size === o.v ? ' on' : ''}" data-sz="${p.id}" data-v="${esc(o.v)}" aria-pressed="${c.size === o.v}">${esc(o.t)}</button>`).join('')}</div>`;
+    return `<div class="co-item"><img src="${p.image}" alt="${esc(label(p))}" width="64" height="80"><div><div class="nm">${esc(p.name)}</div><div class="sm">${kind(p)} · ${meta}</div>${sel}<div class="row2"><span class="pr">${rp(p.price)}</span><button type="button" class="rm" data-rm="${p.id}">Hapus</button></div></div></div>`;
+  }).join('') : '<p class="co-empty">Keranjang masih kosong. Pilih produk di katalog, lalu tekan Beli Sekarang.</p>';
+  const sg = $('#coSug');
+  if (k.pairs > 0) sg.innerHTML = `<div class="co-on"><b>Paket bundling aktif.</b> Potongan ${rp(k.disc)}${k.pairs > 1 ? ' (' + k.pairs + ' paket)' : ''} sudah diterapkan${k.java ? ' dan ongkir Pulau Jawa gratis.' : '. Gratis ongkir berlaku untuk pengiriman Pulau Jawa.'}</div>`;
+  else if (k.items.length){
+    const want = k.g ? 'heels' : 'gaun';
+    sg.innerHTML = `<div class="co-sug"><p>Tambahkan 1 ${k.g ? 'Heels' : 'Gaun'} Pengantin untuk mengaktifkan <b>potongan Rp25.000 + gratis ongkir Pulau Jawa</b>.</p>${PRODUCTS.filter(p => p.cat === want).map(p => `<button type="button" data-add="${p.id}">${want === 'gaun' ? 'Gaun' : 'Heels'} ${p.no} · ${rp(p.price)}</button>`).join('')}</div>`;
+  } else sg.innerHTML = '';
+  $('#coTot').innerHTML = `<div><span>Subtotal produk</span><span>${rp(k.sub)}</span></div><div><span>Potongan bundling</span><span>${k.pairs ? '− ' + rp(k.disc) : 'Belum aktif'}</span></div><div><span>Ongkos kirim</span><span>${ongkirText(k)}</span></div><div class="g"><span>Total produk</span><span>${rp(k.total)}</span></div>`;
+  $('#co-sizeok-w').hidden = !k.g;
+}
+function openCheckout(){
+  $('#coView').hidden = false; $('#coReceipt').hidden = true; $('#coTitle').textContent = 'Pesanan Anda';
+  renderCo();
+  if (!layers.some(l => l.el.id === 'coLayer')) openLayer($('#coLayer'));
+}
+function buyNow(id){ addToCart(id, true); openCheckout(); }
+$('#cartBtn').addEventListener('click', openCheckout);
+$('#coLayer').addEventListener('change', e => {
+  if (e.target.classList.contains('co-size')){ const c = inCart(e.target.dataset.id); if (c) c.size = e.target.value; setErr('cosize', ''); }
+  if (e.target.id === 'co-dest') renderCo();
+  if (e.target.id === 'co-sizeok') setErr('cosizeok', '');
+});
+$('#coLayer').addEventListener('click', e => {
+  const rm = e.target.closest('[data-rm]');
+  if (rm){ const i = cart.findIndex(c => c.id === rm.dataset.rm); if (i >= 0) cart.splice(i, 1); renderCo(); return; }
+  const sz = e.target.closest('[data-sz]');
+  if (sz){ const c = inCart(sz.dataset.sz); if (c){ c.size = sz.dataset.v; setErr('cosize', ''); renderCo(); } return; }
+  const ad = e.target.closest('[data-add]');
+  if (ad){ addToCart(ad.dataset.add, true); renderCo(); }
+});
+$('#coForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const k = calc(), name = $('#co-name').value.trim(), phone = $('#co-phone').value.trim(), addr = $('#co-addr').value.trim(), pay = $('#co-pay').value;
+  let bad = 0; const chk = (key, m) => { setErr(key, m); if (m) bad++; };
+  chk('coitems', k.items.length ? '' : 'Keranjang masih kosong. Pilih produk dulu.');
+  const miss = k.items.filter(x => !x.c.size);
+  chk('cosize', miss.length ? 'Pilih ukuran untuk: ' + miss.map(x => (isGaun(x.p) ? 'Gaun ' : 'Heels ') + x.p.no).join(', ') + '.' : '');
+  chk('coname', name ? '' : 'Nama pembeli wajib diisi.');
+  chk('cophone', /^(\+62|62|0)8\d{7,12}$/.test(phone.replace(/[\s-]/g, '')) ? '' : 'Masukkan nomor HP yang valid, contoh 0812 3456 7890.');
+  chk('coaddr', addr.length >= 10 ? '' : 'Alamat pengiriman wajib diisi lengkap.');
+  chk('copay', pay ? '' : 'Pilih metode pembayaran.');
+  chk('cosizeok', k.g && !$('#co-sizeok').checked ? 'Centang untuk mengonfirmasi detail ukuran gaun.' : '');
+  if (bad){ toast('Data belum lengkap. Periksa kolom yang ditandai.'); const f = $('#coLayer .err:not(:empty)'); if (f) f.scrollIntoView({ behavior:'smooth', block:'center' }); return; }
+  const now = new Date(), p2 = n => String(n).padStart(2, '0');
+  const ref = 'LBA-' + String(now.getFullYear()).slice(2) + p2(now.getMonth() + 1) + p2(now.getDate()) + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+  const when = now.toLocaleString('id-ID', { dateStyle:'full', timeStyle:'short' });
+  const dest = k.java ? 'Pulau Jawa' : 'Luar Pulau Jawa', ong = ongkirText(k);
+  const lines = k.items.map(({ c, p }, i) => `${i + 1}. ${label(p)}\n   ${sizeText(c, p)}${isGaun(p) ? ' | Dada ' + p.bust + ' | Panjang ' + p.length : ''}\n   ${rp(p.price)}`).join('\n');
+  const text = `KONFIRMASI ORDER - LA BELLE ATELIER\nNo. Referensi: ${ref}\nTanggal: ${when}\n\nDATA PEMBELI\nNama: ${name}\nNo. HP: ${phone}\nAlamat: ${addr}\nTujuan kirim: ${dest}\n\nPESANAN\n${lines}\n\nSubtotal: ${rp(k.sub)}\nPotongan bundling: ${k.pairs ? '-' + rp(k.disc) : '-'}\nOngkir: ${ong}\nTOTAL PRODUK: ${rp(k.total)}\n\nMetode pembayaran: ${pay}\n\nMohon konfirmasi ketersediaan stok dan info pembayaran. Terima kasih.`;
+  lastOrder = text;
+  $('#rcpView').innerHTML = `<div class="rc-h"><span class="eyebrow">No. Referensi</span><b>${ref}</b><small>${esc(when)}</small></div>
+    <div class="rc-b"><b>${esc(name)}</b><span>${esc(phone)}</span><span>${esc(addr)}</span><span>Tujuan kirim: ${dest}</span></div>
+    ${k.items.map(({ c, p }) => `<div class="rc-r"><span>${esc(label(p))}<small>${esc(sizeText(c, p))}</small></span><span>${rp(p.price)}</span></div>`).join('')}
+    <div class="rc-r t"><span>Subtotal</span><span>${rp(k.sub)}</span></div>
+    <div class="rc-r"><span>Potongan bundling</span><span>${k.pairs ? '− ' + rp(k.disc) : '-'}</span></div>
+    <div class="rc-r"><span>Ongkos kirim</span><span>${ong}</span></div>
+    <div class="rc-r g"><span>Total produk</span><span>${rp(k.total)}</span></div>
+    <div class="rc-r"><span>Pembayaran</span><span>${esc(pay)}</span></div>`;
+  $('#rcpPre').textContent = text;
+  $('#rcpAdm').innerHTML = CONFIG.admins.map(adminCard).join('');
+  $('#coView').hidden = true; $('#coReceipt').hidden = false; $('#coTitle').textContent = 'Struk Pesanan';
+  $('#coLayer .panel').scrollTop = 0;
+});
+let lastOrder = '';
+$('#rcpCopy').addEventListener('click', () => copyText(lastOrder, 'Teks konfirmasi disalin.', $('#rcpPre')));
+$('#rcpBack').addEventListener('click', () => { $('#coView').hidden = false; $('#coReceipt').hidden = true; $('#coTitle').textContent = 'Pesanan Anda'; renderCo(); });
+$('#rcpDone').addEventListener('click', () => {
+  cart.length = 0; $('#coForm').reset(); updateCartBadge(); renderCo(); closeLayer($('#coLayer'));
+  toast('Kirim teks konfirmasi ke admin untuk memproses pesanan Anda.');
+});
+
+/* ---------- galeri & lightbox ---------- */
+$('#gallery').innerHTML = GALLERY.map((g, i) => `<button data-i="${i}" aria-label="Perbesar foto: ${g.label}"><img src="${g.image}" alt="${g.label}" loading="lazy" width="400" height="400"><span class="cap">${g.label}</span></button>`).join('');
+let lbI = 0;
+function lbShow(){ const g = GALLERY[lbI]; $('#lbImg').src = g.image; $('#lbImg').alt = g.label; $('#lbCap').textContent = g.label; }
+function lbStep(d){ lbI = (lbI + d + GALLERY.length) % GALLERY.length; lbShow(); }
+$('#gallery').addEventListener('click', e => { const b = e.target.closest('button[data-i]'); if (!b) return; lbI = +b.dataset.i; lbShow(); openLayer($('#lbLayer')); });
+$('#lbPrev').addEventListener('click', () => lbStep(-1));
+$('#lbNext').addEventListener('click', () => lbStep(1));
+
+/* ---------- testimoni ---------- */
+$('#testi').innerHTML = TESTIMONIALS.map(t => `<figure class="t-card reveal" style="margin:0"><div class="stars" role="img" aria-label="Rating 5 dari 5">${ICON.star.repeat(5)}</div><blockquote>${t.text}</blockquote><cite>— ${t.who} (${t.what})</cite></figure>`).join('');
+
+/* ---------- reservasi ---------- */
+(function initForm(){
+  const sel = $('#r-time'), h = CONFIG.hours;
+  for (let m = h.startHour * 60; m <= h.lastSlotHour * 60 + h.lastSlotMinute; m += h.step){
+    const hh = String(Math.floor(m / 60)).padStart(2, '0'), mm = String(m % 60).padStart(2, '0');
+    const o = document.createElement('option'); o.value = hh + ':' + mm; o.textContent = hh + '.' + mm + ' WIB'; sel.appendChild(o);
+  }
+  const d = new Date(), pad = n => String(n).padStart(2, '0');
+  $('#r-date').min = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  ['gaun','heels'].forEach(k => {
+    $('#dd-' + k + ' .dd-list').innerHTML = PRODUCTS.filter(p => p.cat === k).map(p => `<label><input type="checkbox" name="prod" value="${p.id}"><span>${label(p)}</span></label>`).join('');
+  });
+  $('#adm').innerHTML = CONFIG.admins.map((a, i) => `<label><input type="radio" name="admin" value="${a.id}"${i === 0 ? '' : ''}><span>${a.name}</span></label>`).join('');
+})();
+function selectedProducts(){ return $$('input[name=prod]:checked').map(i => byId(i.value)); }
+function refreshChosen(){
+  const sp = selectedProducts();
+  ['gaun','heels'].forEach(k => { const n = sp.filter(p => p.cat === k).length; $('#dd-' + k + ' .cnt').textContent = n ? '(' + n + ' dipilih)' : ''; });
+  $('#chosen').textContent = sp.length ? 'Dipilih: ' + sp.map(p => (p.cat === 'gaun' ? 'Gaun ' : 'Heels ') + p.no).join(', ') : 'Anda boleh memilih lebih dari satu produk.';
+}
+$('#resvForm').addEventListener('change', e => { if (e.target.name === 'prod') refreshChosen(); });
+function selectProduct(id){
+  const i = $('input[name=prod][value="' + id + '"]'); if (!i) return;
+  i.checked = true; i.closest('details').open = true; refreshChosen();
+}
+function setErr(key, msg){
+  $('#e-' + key).textContent = msg || '';
+  const f = $('#f-' + key); if (f) f.classList.toggle('invalid', !!msg);
+}
+function fmtDate(v){
+  const dt = new Date(v + 'T00:00:00');
+  return dt.toLocaleDateString('id-ID', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+}
+function validDate(v){
+  if (!v) return 'Pilih tanggal kunjungan.';
+  const dt = new Date(v + 'T00:00:00'); if (isNaN(dt)) return 'Tanggal tidak valid.';
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  if (dt < today) return 'Tanggal yang sudah lewat tidak dapat dipilih.';
+  if (!CONFIG.workDays.includes(dt.getDay())) return 'Fitting hanya tersedia Senin–Jumat. Pilih hari kerja.';
+  return '';
+}
+$('#r-date').addEventListener('change', () => setErr('date', validDate($('#r-date').value)));
+let lastMsg = '', lastNo = '';
+$('#resvForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = $('#r-name').value.trim(), date = $('#r-date').value, time = $('#r-time').value;
+  const adm = CONFIG.admins.find(a => a.id === ($('input[name=admin]:checked') || {}).value);
+  const prods = selectedProducts(), note = $('#r-note').value.trim();
+  let bad = 0;
+  const chk = (k, m) => { setErr(k, m); if (m) bad++; };
+  chk('name', name ? '' : 'Nama lengkap wajib diisi.');
+  chk('date', validDate(date));
+  let tm = time ? '' : 'Pilih jam kunjungan.';
+  if (!tm && !validDate(date)){
+    const now = new Date(), dt = new Date(date + 'T' + time + ':00');
+    if (dt <= now) tm = 'Jam tersebut sudah lewat. Pilih jam yang lebih akhir.';
+  }
+  chk('time', tm);
+  chk('prod', prods.length ? '' : 'Pilih minimal satu produk yang ingin dicoba.');
+  chk('adm', adm ? '' : 'Pilih admin yang akan Anda hubungi.');
+  if (bad){ toast('Formulir belum lengkap. Periksa kolom yang ditandai.'); const f = $('.invalid'); if (f) f.scrollIntoView({ behavior:'smooth', block:'center' }); return; }
+  lastMsg = `Halo ${adm.name}, saya ingin reservasi fitting di La Belle Atelier.\n\nNama: ${name}\nTanggal: ${fmtDate(date)}\nJam: ${time.replace(':', '.')} WIB\nProduk yang ingin dicoba:\n${prods.map(p => '- ' + label(p)).join('\n')}\nCatatan: ${note || '-'}\n\nMohon konfirmasi ketersediaan jadwal. Terima kasih.`;
+  $('#resPre').textContent = lastMsg;
+  lastNo = adm.display; $('#resCopyNo').textContent = 'Salin Nomor ' + adm.name + ' (' + adm.display + ')';
+  const r = $('#result'); r.hidden = false; r.scrollIntoView({ behavior:'smooth', block:'nearest' });
+});
+$('#resCopy').addEventListener('click', () => copyText(lastMsg, 'Ringkasan jadwal disalin.', $('#resPre')));
+$('#resCopyNo').addEventListener('click', () => copyText(lastNo, 'Nomor admin disalin.'));
+
+/* ---------- FAQ ---------- */
+$('#faqList').innerHTML = FAQ.map((f, i) => `<div class="q"><h3 style="font-size:inherit"><button aria-expanded="false" aria-controls="fa${i}" id="fq${i}"><span>${f[0]}</span>${ICON.plus}</button></h3><div class="a" id="fa${i}" role="region" aria-labelledby="fq${i}"><div><p>${f[1]}</p></div></div></div>`).join('');
+$('#faqList').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const q = b.closest('.q'), open = !q.classList.contains('open');
+  q.classList.toggle('open', open); b.setAttribute('aria-expanded', String(open));
+});
+
+/* ---------- footer, kontak, tombol melayang ---------- */
+$('#contacts').innerHTML = CONFIG.admins.map(a => `<div><b>Admin ${esc(a.name.replace('Kak ', ''))}</b><span>${esc(a.display)}</span><br><button class="wl" type="button" data-copy="${esc(a.display)}" data-msg="Nomor ${esc(a.name)} disalin.">Salin nomor</button></div>`).join('');
+$('#ctList').innerHTML = CONFIG.admins.map(adminCard).join('');
+$('#fabBtn').addEventListener('click', () => openLayer($('#contactLayer')));
+(function(){
+  const ig = CONFIG.instagram, el = $('#ig');
+  if (ig.url) el.innerHTML = `<a href="${ig.url}" target="_blank" rel="noopener">${ig.handle}</a>`; else el.textContent = ig.handle;
+  if (CONFIG.address) $('#addr').innerHTML = '<p>' + CONFIG.address + '</p>';
+  $('#yr').textContent = new Date().getFullYear();
+})();
+
+/* ---------- fade-in ---------- */
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting){ en.target.classList.remove('pre'); io.unobserve(en.target); } }), { threshold: .12 });
+  $$('.reveal').forEach(el => { if (el.getBoundingClientRect().top > window.innerHeight){ el.classList.add('pre'); io.observe(el); } });
+})();
+
+renderCatalog();
+</script>
+</body>
+</html>
